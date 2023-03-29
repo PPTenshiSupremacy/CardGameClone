@@ -1,0 +1,42 @@
+I found this project to be pretty fun. organizing the code into a proper state machine was a fun xercise, and forced me 
+to think a lot more in advance about how I wanted to do the project and how it should be structured.
+I've included the text of my pre-planning document into here, just to show my work.
+I think that the hardest part of this was juggling the sheer amount of states I had to work with, mainly because of the way I chose
+to code it, which is handling hands and stuff w/out using arrays.
+
+
+Features of Grid Game
+48 Cards in Deck, 3 types of cards, Scissors, Rock, and Paper
+Player vs. AI, both are dealt 3 cards
+
+Game Phases
+Game Start > Deal Phase > Play Phase > Resolve > Cleanup Phase > Deal Phase
+
+
+Game Start Logic
+1. Put 48 cards into the deck in a random order
+2. Move to Deal Phase
+
+Deal Phase Logic
+1. Check if there are cards left in the deck
+2. If no cards left, reshuffle deck from discard pile
+3. Deal 3 cards to AI 
+4. Deal 3 cards to player
+5. Move to Play Phase
+
+Play Phase
+1. AI plays the middle card (Moving it forward)
+2. Player can choose their card by clicking on it with their mouse
+3. Move player's chosen card forward into play area
+4. Move to Resolve Phase
+
+Resolve Phase
+1. Check winnner by flipping over opponent's middle card
+2. Allocate score to winner of the match
+3. Move to Cleanup phase
+
+Cleanup Phase
+1. Shuffle AI card into discard faceup
+2. Shuffle player card into discard faceup
+3. Shuffle AI hand into discard faceup
+4. Move to Deal Phase
