@@ -1,0 +1,6 @@
+TO DO LIST FOR CARD GAME MOD
+Section 1: Bugfixes and improvements
+1. Standardize lerping impelementation, either by going back and adding timers to currently implemented steps, or by
+adding int64 conversion to AI card movement
+2. Implement AI random card selection (Currently only selects the 2nd card)
+3. Add timer to resolve phase in order to ensure that the cards that were pulled are actually visible

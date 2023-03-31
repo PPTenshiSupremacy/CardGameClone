@@ -115,7 +115,7 @@ switch(current_phase) {
 				//Move card
 				c1.x = xx;
 				c1.y = yy;
-				if(c1.y ==ai_cardY){
+				if(int64(c1.y) ==ai_cardY){
 					cards_dealt++;
 					audio_play_sound(moveCard, 10, false);
 				}
@@ -129,7 +129,7 @@ switch(current_phase) {
 				//Move card
 				c2.x = xx;
 				c2.y = yy;
-				if(c2.y ==ai_cardY){
+				if(int64(c2.y) ==ai_cardY){
 					cards_dealt++;
 					audio_play_sound(moveCard, 10, false);
 				}
@@ -142,7 +142,7 @@ switch(current_phase) {
 				//Move card
 				c3.x = xx;
 				c3.y = yy;
-				if(c3.y ==ai_cardY){
+				if(int64(c3.y) ==ai_cardY){
 					cards_dealt++;
 					audio_play_sound(moveCard, 10, false);
 				}
