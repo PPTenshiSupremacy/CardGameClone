@@ -3,4 +3,14 @@ Section 1: Bugfixes and improvements
 1. Standardize lerping impelementation, either by going back and adding timers to currently implemented steps, or by
 adding int64 conversion to AI card movement
 2. Implement AI random card selection (Currently only selects the 2nd card)
-3. Add timer to resolve phase in order to ensure that the cards that were pulled are actually visible
+3. Add timer to resolve phase in order to ensure that the cards that were pulled are actually visible for longer than 1 frame
+before they start moving
+4. Add a readMe text explaining the game and how its played
+5. Convert the hand storage from hardcoded objects to list implementations for future convenience
+
+Design Goal for Mod
+
+
+
+
+Section 2: Implementing Mod
