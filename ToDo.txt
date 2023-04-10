@@ -1,7 +1,7 @@
 TO DO LIST FOR CARD GAME MOD
 Section 1: Bugfixes and improvements
 1. Standardize lerping impelementation, either by going back and adding timers to currently implemented steps, or by
-adding int64 conversion to AI card movement DONE
+adding int64 conversion to AI card movement
 2. Implement AI random card selection (Currently only selects the 2nd card)
 3. Add timer to resolve phase in order to ensure that the cards that were pulled are actually visible for longer than 1 frame
 before they start moving
@@ -9,39 +9,8 @@ before they start moving
 5. Convert the hand storage from hardcoded objects to list implementations for future convenience
 
 Design Goal for Mod
-Change the game from pure RPS to something with some form of thought involved.
-Make it into a STS style card battler
-One boss-esque enemy
-Player has 5 different cards:
-Block
-Strike
-Warcry (Buff)
-Gouge (Debuff)
-Flamestrike (Power Attack+DoT)
-
-Boss Has a healthbar, loses health when attacked
-Boss has 3 moves, will indicate what move they are doing between turns by changing sprite
-Attack (Does Damage)
-Block (Negates X Damage)
-Buff (Increases attack and block value by 1)
-
-Game Loop
-Game Start
-Deal out 3 cards to the player
-
-Deal
-Change boss sprite based on boss action
 
 
-Play Phase
-Player selects a card from hand to play
-Player card effect takes place
-Check if boss is dead
-Played card is moved to discard
-Player can choose to play a second card per turn
-Boss action resolves
-Check if player is dead
-Move to Deal
+
 
 Section 2: Implementing Mod
-1. Remove enemy hand, rework hand to hold 6 cards max
