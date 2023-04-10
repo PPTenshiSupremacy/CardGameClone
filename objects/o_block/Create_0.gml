@@ -1,2 +1,2 @@
 faceUp = false;
-cType = 1;
+cType = "block";

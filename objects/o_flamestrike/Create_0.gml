@@ -1,0 +1,3 @@
+
+faceUp = false;
+cType = "flamestrike;

@@ -1,0 +1,2 @@
+faceUp = false;
+cType = "warcry";

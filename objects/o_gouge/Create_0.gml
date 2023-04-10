@@ -1,2 +1,2 @@
 faceUp = false;
-cType = 0;
+cType = "gouge;
