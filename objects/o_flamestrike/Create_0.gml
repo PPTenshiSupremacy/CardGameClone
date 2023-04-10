@@ -1,3 +1,0 @@
-
-faceUp = false;
-cType = "flamestrike;

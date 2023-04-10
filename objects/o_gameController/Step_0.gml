@@ -1,36 +1,26 @@
 switch(current_phase) {
 	case phases.start:
-		for(i = 0; i < 24; i++) {
-			if(i<6){
-				var block = instance_create_layer(64,352,"Instances", o_block);
-				cards[i] = block;
-				show_debug_message("Making block");
+		for(i = 0; i < 48; i++) {
+			if(i<16){
+				var rock = instance_create_layer(64,352,"Instances", o_rock);
+				cards[i] = rock;
+				show_debug_message("Making rock");
 			}
-			else if(i>=6 && i<12){
-				var strike = instance_create_layer(64,352,"Instances", o_strike);
-				cards[i] = strike;
-				show_debug_message("Making strike");
+			else if(i>=16 && i<32){
+				var paper = instance_create_layer(64,352,"Instances", o_paper);
+				cards[i] = paper;
+				show_debug_message("Making paper");
 			}
-			else if(i>=12 && i<16){
-				var warcry = instance_create_layer(64,352,"Instances", o_warcry);
-				cards[i] = warcry;
-				show_debug_message("Making warcry");
-			}
-			else if(i>=16 && i<20){
-				var gouge = instance_create_layer(64,352,"Instances", o_gouge);
-				cards[i] = gouge;
-				show_debug_message("Making gouge");
-			}
-			else if(i>=20 && i<24){
-				var fStrike = instance_create_layer(64,352,"Instances", o_flamestrike);
-				cards[i] = fStrike;
-				show_debug_message("Making fStrike");
+			else if(i>=32 && i<48){
+				var scissors = instance_create_layer(64,352,"Instances", o_scissors);
+				cards[i] = scissors;
+				show_debug_message("Making scissor");
 			}
 		}
 		randomise();
 		//var shuffleDeck = array_shuffle(cards);//Shuffle the array
 		array_shuffle_ext(cards);
-		for(i = 0; i<24; i++) {
+		for(i = 0; i<48; i++) {
 			ds_stack_push(deck, cards[i]);//Copy array into stack
 			show_debug_message(i);
 		}
@@ -50,7 +40,7 @@ switch(current_phase) {
 		if(ds_stack_size(deck) != 0){//Check if there are cards in deck
 			//Go through basic game loop
 			//Assign card labels for dealing phase
-			/*c1 = ds_stack_pop(deck);
+			c1 = ds_stack_pop(deck);
 			c2 = ds_stack_pop(deck);
 			c3 = ds_stack_pop(deck);
 			c4 = ds_stack_pop(deck);
@@ -61,21 +51,7 @@ switch(current_phase) {
 			ds_list_add(activeList, c3);
 			ds_list_add(activeList, c4);
 			ds_list_add(activeList, c5);
-			ds_list_add(activeList, c6);*/
-			if(turnCount == 0){//Draw 3 cards if T0, otherwise draw 1
-				/*for(i=0; i<3; i++;){
-					var offset = i*16;
-					ds_list_add(pHand, ds_stack_pop(deck));
-					lerpTo(pHand[| i], pCardX-offset, pCardY)
-				}*/
-				
-			}
-			else{
-				var temp = ds_stack_pop(deck)
-				var offset = ds_list_size(pHand)*16;
-				ds_list_add(pHand, temp);
-				lerpTo(temp, pCardX-offset, pCardY)
-			}
+			ds_list_add(activeList, c6);
 			current_phase = phases.dealing;
 		}
 		else{//Reshuffle discard pile into deck
@@ -129,7 +105,7 @@ switch(current_phase) {
 		}
 		//show_debug_message("End Phase 2");
 		break;
-	/*case phases.dealing:
+	case phases.dealing:
 		switch(cards_dealt){
 			case 0:
 				var currentX = c1.x;
@@ -513,7 +489,7 @@ switch(current_phase) {
 						shuffleTime = true;
 					}
 					break;
-			}*/
+			}
 		break;
 	default:
 }

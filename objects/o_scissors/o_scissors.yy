@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "o_flamestrike",
+  "name": "o_scissors",
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "s_cardBack",
-    "path": "sprites/s_cardBack/s_cardBack.yy",
+    "name": "s_scissors",
+    "path": "sprites/s_scissors/s_scissors.yy",
   },
   "spriteMaskId": null,
   "visible": true,

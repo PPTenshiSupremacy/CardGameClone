@@ -1,2 +1,0 @@
-faceUp = false;
-cType = "warcry";
